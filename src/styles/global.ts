@@ -10,8 +10,12 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body, #__next {
+    height: 100%;
+  }
+
   body {
-    background-color: black;
+    font-size: 16px;
   }
 
   ${fontFaces};
