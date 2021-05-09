@@ -1,9 +1,9 @@
-import { Icon } from './icon.types';
+import { ImageProps } from '@/shared';
 
 type AboutSectionTabsItem = {
   title: string;
   subTitle?: string;
-  icons: Icon[];
+  icons: ImageProps[];
 };
 
 export type AboutSectionTabs = {

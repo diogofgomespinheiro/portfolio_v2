@@ -1,12 +1,8 @@
-import {
-  LandingPageProps,
-  AboutSectionProps,
-  ContactSectionProps,
-  HomeSectionProps,
-  AboutSectionTabs,
-  Icon,
-  ProjectsSectionProps
-} from '@/shared';
+import { AboutSectionProps, AboutSectionTabs } from '@/components/aboutSection';
+import { HomeSectionProps } from '@/components/homeSection';
+import { ContactSectionProps } from '@/components/contactSection';
+import { ProjectsSectionProps } from '@/components/projectsSection';
+import { LandingPageProps, ImageProps } from '@/shared';
 
 export class LandingPagePropsMapper {
   data: any;
@@ -95,7 +91,7 @@ export class LandingPagePropsMapper {
     tabs.push({
       title: 'Skills',
       items: skills.map(
-        (item: { specialty: string; techs: { icon: Icon }[] }) => ({
+        (item: { specialty: string; techs: { icon: ImageProps }[] }) => ({
           title: item.specialty,
           icons: item.techs.map(tech => tech.icon)
         })

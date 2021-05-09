@@ -1,10 +1,9 @@
+import { ImageProps } from '@/shared';
+
 export type Project = {
   name: string;
   description: string;
-  coverImage: {
-    url: string;
-    alt: string;
-  };
+  coverImage: ImageProps;
   techs: string[];
   demoUrl?: string;
   repositoryUrl?: string;
