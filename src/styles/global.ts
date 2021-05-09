@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { typography } from '@diogop_96/portfolio-component-library';
 
-import { fontFaces } from './themes';
-
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -15,9 +13,8 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: 16px;
+    background-color: ${({ theme }) => theme.colors.background};
   }
 
-  ${fontFaces};
   ${typography};
 `;

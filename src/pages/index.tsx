@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { getLandingPageContent } from '@/lib';
 import { LandingPageProps } from '@/shared';
 
-const LandingPage = (props: LandingPageProps) => {
+const LandingPage = () => {
   return (
     <div>
       <main></main>
