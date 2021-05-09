@@ -2,12 +2,17 @@ import * as React from 'react';
 import { GetStaticProps } from 'next';
 
 import Layout from '@/components/layout';
+import HomeSection from '@/components/homeSection';
 
 import { getLandingPageContent } from '@/lib';
 import { LandingPageProps } from '@/shared';
 
-const LandingPage = () => {
-  return <Layout>Test</Layout>;
+const LandingPage = ({ homeSection }: LandingPageProps) => {
+  return (
+    <Layout>
+      <HomeSection {...homeSection} />
+    </Layout>
+  );
 };
 
 export const getStaticProps: GetStaticProps<LandingPageProps> = async ({

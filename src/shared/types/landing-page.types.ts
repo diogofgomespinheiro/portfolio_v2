@@ -1,7 +1,7 @@
-import { AboutSectionProps } from './about.types';
-import { HomeSectionProps } from './home.types';
-import { ProjectsSectionProps } from './projects.types';
-import { ContactSectionProps } from './contact.types';
+import { AboutSectionProps } from '@/components/aboutSection';
+import { HomeSectionProps } from '@/components/homeSection';
+import { ProjectsSectionProps } from '@/components/projectsSection';
+import { ContactSectionProps } from '@/components/contactSection';
 
 export type LandingPageProps = {
   homeSection: HomeSectionProps;

@@ -9,18 +9,18 @@ export const Footer = styled.footer`
     display: block;
     margin: 0 auto;
     text-align: center;
-    color: ${({ theme }) => theme.colors.text.secondary};
+    color: ${({ theme }) => theme.colors.secondary};
 
     ${body3Mixin};
 
     & > a {
       text-decoration: none;
-      color: ${({ theme }) => theme.colors.text.secondary};
+      color: ${({ theme }) => theme.colors.secondary};
 
       ${body3Mixin};
 
       &:hover {
-        color: ${({ theme }) => theme.colors.text.accent};
+        color: ${({ theme }) => theme.colors.accent};
       }
     }
   }
