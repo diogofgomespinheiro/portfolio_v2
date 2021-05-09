@@ -12,6 +12,11 @@ export default createGlobalStyle`
     height: 100%;
   }
 
+  #__next {
+    display: flex;
+    flex-direction: column;
+  }
+
   body {
     background-color: ${({ theme }) => theme.colors.background};
   }
