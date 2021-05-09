@@ -11,7 +11,7 @@ const HomeSection = ({
   welcomeMessages
 }: HomeSectionProps) => {
   return (
-    <S.Container>
+    <S.Container role="home" id="home">
       <S.PersonalInfoContainer>
         <S.WelcomeBox>
           <Typewriter

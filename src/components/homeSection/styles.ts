@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 import { deviceQueries, h5Mixin } from '@diogop_96/portfolio-component-library';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   flex-direction: column-reverse;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 40px;
 
+  height: 100vh;
   width: 100%;
-  margin-top: 40px;
 
   @media screen and (${deviceQueries.tablet.min}) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    height: 100vh;
   }
 `;
 
