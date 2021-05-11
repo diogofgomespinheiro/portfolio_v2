@@ -3,15 +3,21 @@ import { GetStaticProps } from 'next';
 
 import Layout from '@/components/layout';
 import HomeSection from '@/components/homeSection';
+import AboutSection from '@/components/aboutSection';
 import ContactSection from '@/components/contactSection';
 
 import { getLandingPageContent } from '@/lib';
 import { LandingPageProps } from '@/shared';
 
-const LandingPage = ({ homeSection, contactSection }: LandingPageProps) => {
+const LandingPage = ({
+  homeSection,
+  aboutSection,
+  contactSection
+}: LandingPageProps) => {
   return (
     <Layout>
       <HomeSection {...homeSection} />
+      <AboutSection {...aboutSection} />
       <ContactSection {...contactSection} />
     </Layout>
   );

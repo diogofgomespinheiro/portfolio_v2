@@ -25,6 +25,8 @@ export const aboutSectionQuery = `
         icon {
           url
           alt
+          height
+          width
         }
       }
       specialty
@@ -53,6 +55,9 @@ export const projectsSectionQuery = `
       coverImage {
         url
         alt
+        responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 500, h: 350 }) {
+          ...responsiveImageFragment
+        }
       }
       techs {
         name

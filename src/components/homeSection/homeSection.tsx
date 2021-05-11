@@ -11,7 +11,7 @@ const HomeSection = ({
   welcomeMessages
 }: HomeSectionProps) => {
   return (
-    <S.Container role="home" id="home">
+    <S.Container id="home">
       <S.PersonalInfoContainer>
         <S.WelcomeBox>
           <Typewriter
@@ -27,13 +27,7 @@ const HomeSection = ({
         <h3>{subTitle}</h3>
       </S.PersonalInfoContainer>
       <S.ImageWrapper>
-        <Player
-          autoplay
-          loop
-          controls={false}
-          renderer="svg"
-          src="/assets/home-image.json"
-        ></Player>
+        <Player autoplay loop src="/assets/home-image.json"></Player>
       </S.ImageWrapper>
     </S.Container>
   );

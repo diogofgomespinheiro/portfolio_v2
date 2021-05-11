@@ -10,7 +10,7 @@ const ContectSection = ({
   ctaText
 }: ContactSectionProps) => {
   return (
-    <S.Container role="contact" id="contact">
+    <S.Container id="contact">
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
       <Button elementType="a" href="mailto:diogo.fgomes.pinheiro@gmail.com">

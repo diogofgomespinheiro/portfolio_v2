@@ -5,16 +5,15 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
   gap: 40px;
 
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 
   @media screen and (${deviceQueries.tablet.min}) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 0;
   }
 `;
 

@@ -7,13 +7,18 @@ import GlobalStyle from '@/styles/global';
 import { darkTheme, lightTheme } from '@/styles';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const darkMode = useDarkMode(true);
+  const [isMounted, setIsMounted] = React.useState(false);
+  const darkMode = useDarkMode(false);
   const theme = darkMode.value ? darkTheme : lightTheme;
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        {isMounted && <Component {...pageProps} />}
         <GlobalStyle />
       </ThemeProvider>
     </>

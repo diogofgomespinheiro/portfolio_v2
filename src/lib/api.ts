@@ -5,7 +5,8 @@ import {
   aboutSectionQuery,
   homeSectionQuery,
   contactSectionQuery,
-  projectsSectionQuery
+  projectsSectionQuery,
+  responsiveImageFragment
 } from '@/lib';
 import { LandingPagePropsMapper } from '@/lib/mappers';
 
@@ -54,7 +55,10 @@ export async function getLandingPageContent(
         ${aboutSectionQuery}
         ${projectsSectionQuery}
         ${contactSectionQuery}
+
       }
+
+      ${responsiveImageFragment}
     `,
     { preview }
   );
