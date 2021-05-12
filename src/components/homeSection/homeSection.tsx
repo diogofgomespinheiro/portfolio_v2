@@ -24,7 +24,7 @@ const HomeSection = ({
           />
         </S.WelcomeBox>
         <h1>{title}</h1>
-        <h3>{subTitle}</h3>
+        <h2>{subTitle}</h2>
       </S.PersonalInfoContainer>
       <S.ImageWrapper>
         <Player autoplay loop src="/assets/home-image.json"></Player>

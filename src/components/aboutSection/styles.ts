@@ -31,11 +31,19 @@ export const ImageWrapper = styled.div`
     min-width: 350px;
     margin: 0;
   }
+
+  @media screen and (${deviceQueries.laptop.min}) {
+    width: 50%;
+  }
 `;
 
 export const InfoContainer = styled.div`
   max-width: 600px;
   width: 100%;
+
+  @media screen and (${deviceQueries.laptop.min}) {
+    width: 50%;
+  }
 `;
 
 export const PersonalInfoContainer = styled.div`

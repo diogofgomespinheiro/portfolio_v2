@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { deviceQueries, h5Mixin } from '@diogop_96/portfolio-component-library';
+import {
+  deviceQueries,
+  h5Mixin,
+  h3Mixin
+} from '@diogop_96/portfolio-component-library';
 
 export const Container = styled.section`
   display: flex;
@@ -19,8 +23,12 @@ export const Container = styled.section`
 
 export const PersonalInfoContainer = styled.div`
   & > h1,
-  & > h3 {
+  & > h2 {
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  & > h2 {
+    ${h3Mixin};
   }
 
   & > *:not(:last-child) {

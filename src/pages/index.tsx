@@ -1,23 +1,29 @@
-import * as React from 'react';
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { renderMetaTags } from 'react-datocms';
 
 import Layout from '@/components/layout';
 import HomeSection from '@/components/homeSection';
 import AboutSection from '@/components/aboutSection';
+import ProjectsSection from '@/components/projectsSection';
 import ContactSection from '@/components/contactSection';
 
 import { getLandingPageContent } from '@/lib';
 import { LandingPageProps } from '@/shared';
 
 const LandingPage = ({
+  seoMetaTags,
   homeSection,
   aboutSection,
+  projectsSection,
   contactSection
 }: LandingPageProps) => {
   return (
     <Layout>
+      <Head>{renderMetaTags(seoMetaTags)}</Head>
       <HomeSection {...homeSection} />
       <AboutSection {...aboutSection} />
+      <ProjectsSection {...projectsSection} />
       <ContactSection {...contactSection} />
     </Layout>
   );

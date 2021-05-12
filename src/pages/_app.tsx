@@ -8,7 +8,7 @@ import { darkTheme, lightTheme } from '@/styles';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isMounted, setIsMounted] = React.useState(false);
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
 
   React.useEffect(() => {

@@ -4,7 +4,7 @@ import { Button } from '@diogop_96/portfolio-component-library';
 import { ContactSectionProps } from './types';
 import * as S from './styles';
 
-const ContectSection = ({
+const ContactSection = ({
   title,
   description,
   ctaText
@@ -20,4 +20,4 @@ const ContectSection = ({
   );
 };
 
-export default ContectSection;
+export default ContactSection;
