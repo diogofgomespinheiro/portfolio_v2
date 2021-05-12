@@ -1,3 +1,16 @@
+export const landingPageQuery = `
+  landingPage {
+    seo: _seoMetaTags {
+      ...metaTagsFragment
+    }
+  }
+  site: _site {
+    favicon: faviconMetaTags {
+      ...metaTagsFragment
+    }
+  }
+`;
+
 export const homeSectionQuery = `
   homeSection {
     title

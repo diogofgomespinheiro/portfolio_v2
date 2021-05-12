@@ -41,6 +41,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="preconnect" href="https://www.datocms-assets.com" />
+
           <link
             as="style"
             rel="stylesheet preload prefetch"

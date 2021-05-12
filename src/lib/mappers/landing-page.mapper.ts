@@ -13,6 +13,14 @@ export class LandingPagePropsMapper {
     this.props = {} as LandingPageProps;
   }
 
+  mapSeoProps(): LandingPagePropsMapper {
+    const { seo } = this.data.landingPage;
+    const concatenatedSeo = seo.concat(this.data.site.favicon);
+
+    Object.assign(this.props, { seoMetaTags: concatenatedSeo });
+    return this;
+  }
+
   mapHomeSectionProps(): LandingPagePropsMapper {
     const {
       title,

@@ -15,7 +15,7 @@ export default createGlobalStyle`
   }
 
   html, body, #__next {
-    min-height: 100%;
+    min-height: 100vh;
   }
 
   #__next {
@@ -23,7 +23,7 @@ export default createGlobalStyle`
     flex-direction: column;
     padding: 0 30px;
 
-    @media screen and (${deviceQueries.mobileL.min}) {
+    @media screen and (${deviceQueries.tablet.min}) {
       padding: 0 80px;
     }
   }

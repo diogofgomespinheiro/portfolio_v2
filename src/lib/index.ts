@@ -1,3 +1,2 @@
-export * from './api';
-export * from './fragments';
-export * from './queries';
+export * from './dato-cms';
+export * from './github';

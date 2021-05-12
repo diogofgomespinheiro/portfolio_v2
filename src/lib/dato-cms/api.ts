@@ -1,24 +1,23 @@
 import axios from 'axios';
 
 import { FetchAPIParamOptions, LandingPageProps } from '@/shared';
+import { DATOCMS_API_TOKEN, DATOCMS_API_URL } from './constants';
+import { responsiveImageFragment, metaTagsFragment } from './fragments';
 import {
+  landingPageQuery,
   aboutSectionQuery,
   homeSectionQuery,
   contactSectionQuery,
-  projectsSectionQuery,
-  responsiveImageFragment
-} from '@/lib';
+  projectsSectionQuery
+} from './queries';
 import { LandingPagePropsMapper } from '@/lib/mappers';
-
-const API_URL = 'https://graphql.datocms.com';
-const API_TOKEN = process.env.DATOCMS_API_TOKEN;
 
 export async function fetchAPI(
   query: string,
   options: FetchAPIParamOptions = {}
 ) {
   const { variables, preview } = options;
-  let endpoint = API_URL;
+  let endpoint = DATOCMS_API_URL;
 
   if (process.env.NEXT_DATOCMS_ENVIRONMENT) {
     endpoint += `/environments/${process.env.NEXT_DATOCMS_ENVIRONMENT}`;
@@ -33,7 +32,7 @@ export async function fetchAPI(
   const { data: apiResponse } = await axios.post(endpoint, dataToSend, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${API_TOKEN}`
+      Authorization: `Bearer ${DATOCMS_API_TOKEN}`
     }
   });
 
@@ -51,6 +50,7 @@ export async function getLandingPageContent(
   const data = await fetchAPI(
     `
       {
+        ${landingPageQuery}
         ${homeSectionQuery}
         ${aboutSectionQuery}
         ${projectsSectionQuery}
@@ -59,16 +59,38 @@ export async function getLandingPageContent(
       }
 
       ${responsiveImageFragment}
+      ${metaTagsFragment}
     `,
     { preview }
   );
 
   const mappedData = new LandingPagePropsMapper(data)
+    .mapSeoProps()
     .mapHomeSectionProps()
     .mapAboutSectionProps()
     .mapProjectsSectionProps()
     .mapContactSectionProps()
     .getProps();
+
+  return mappedData;
+}
+
+export async function getArchivePageContent(
+  preview: boolean
+): Promise<LandingPageProps> {
+  const data = await fetchAPI(
+    `
+      {
+        ${landingPageQuery}
+
+      }
+
+      ${metaTagsFragment}
+    `,
+    { preview }
+  );
+
+  const mappedData = new LandingPagePropsMapper(data).mapSeoProps().getProps();
 
   return mappedData;
 }
