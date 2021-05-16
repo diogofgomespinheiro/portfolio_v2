@@ -57,7 +57,7 @@ const ProjectSection = ({ title, projects }: ProjectsSectionProps) => {
   });
 
   return (
-    <S.Container id="home">
+    <S.Container id="projects">
       <S.Title>{title}</S.Title>
       <S.ProjectsContainer>{projectCardItems}</S.ProjectsContainer>
       <Button onClick={handleClick}>View the archive</Button>

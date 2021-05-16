@@ -1,7 +1,7 @@
 import * as React from 'react';
-import useDarkMode from 'use-dark-mode';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from '@diogop_96/portfolio-component-library';
+import useDarkMode from 'use-dark-mode';
 
 import GlobalStyle from '@/styles/global';
 import { darkTheme, lightTheme } from '@/styles';
@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        {isMounted && <Component {...pageProps} />}
+        {isMounted && <Component {...pageProps} darkMode={darkMode} />}
         <GlobalStyle />
       </ThemeProvider>
     </>

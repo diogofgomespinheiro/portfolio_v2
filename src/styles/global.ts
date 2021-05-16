@@ -30,6 +30,12 @@ export default createGlobalStyle`
 
   body {
     background-color: ${({ theme }) => theme.colors.background};
+
+    @media screen and (${deviceQueries.mobileL.max}) {
+      &.hide-scroll {
+        overflow: hidden;
+      }
+    }
   }
 
   ${typography};

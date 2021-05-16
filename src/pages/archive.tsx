@@ -83,9 +83,9 @@ const ArchivePage = ({ seoMetaTags }: ArchivePageProps) => {
   };
 
   return (
-    <Layout>
+    <Layout pageId="archive">
       <Head>{renderMetaTags(seoMetaTags)}</Head>
-      <S.Wrapper>
+      <S.Wrapper id="archive">
         <S.Title>Archive</S.Title>
         <S.Container>
           <S.TableContainer>

@@ -19,7 +19,7 @@ const LandingPage = ({
   contactSection
 }: LandingPageProps) => {
   return (
-    <Layout>
+    <Layout pageId="home">
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <HomeSection {...homeSection} />
       <AboutSection {...aboutSection} />
