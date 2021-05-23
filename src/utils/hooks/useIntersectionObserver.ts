@@ -27,7 +27,6 @@ export const useIntersectionObserver = ({
 
       if (intersectedEntries.length) {
         const id = intersectedEntries[0].target.id;
-        console.log(id);
 
         if (useIndex) {
           const selectedIndex = elements.findIndex(

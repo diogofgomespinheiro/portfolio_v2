@@ -45,8 +45,8 @@ export default class MyDocument extends Document {
 
           <link
             as="style"
-            rel="stylesheet preload prefetch"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet prefetch"
+            href="//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
             type="text/css"
             crossOrigin="anonymous"
           />
