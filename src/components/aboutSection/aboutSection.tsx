@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import Image from 'next/image';
 import {
   Tabs,
   Tab,
@@ -26,7 +26,12 @@ const AboutSection = ({ title, description, tabs }: AboutSectionProps) => {
   return (
     <S.Container id="about">
       <S.ImageWrapper>
-        <Player autoplay loop src={`/assets/about-image.json`}></Player>
+        <Image
+          src="/assets/about-image.svg"
+          alt="Ilustration of Developer 2"
+          width={500}
+          height={500}
+        />
       </S.ImageWrapper>
       <S.InfoContainer>
         <S.PersonalInfoContainer>

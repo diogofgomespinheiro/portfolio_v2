@@ -6,24 +6,28 @@ export const menuItems = {
         id: 'home',
         label: 'Home',
         type: 'scroll',
+        spy: true,
         offset: -118
       },
       {
         id: 'about',
         label: 'About',
         type: 'scroll',
+        spy: true,
         offset: -118
       },
       {
         id: 'projects',
         label: 'Projects',
         type: 'scroll',
+        spy: true,
         offset: -118
       },
       {
         id: 'contact',
         label: 'Contact',
         type: 'scroll',
+        spy: true,
         offset: 0
       },
       {
@@ -53,6 +57,7 @@ export const menuItems = {
         id: 'archive',
         label: 'Archive',
         type: 'scroll',
+        spy: false,
         offset: 0
       },
       {
@@ -82,6 +87,7 @@ export const menuItems = {
         id: 'blog',
         label: 'Blog',
         type: 'scroll',
+        spy: false,
         offset: 0
       }
     ]

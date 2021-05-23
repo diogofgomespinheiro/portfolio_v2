@@ -1,6 +1,6 @@
 import * as React from 'react';
+import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
-import { Player } from '@lottiefiles/react-lottie-player';
 
 import { HomeSectionProps } from './types';
 import * as S from './styles';
@@ -11,25 +11,32 @@ const HomeSection = ({
   welcomeMessages
 }: HomeSectionProps) => {
   return (
-    <S.Container id="home">
-      <S.PersonalInfoContainer>
-        <S.WelcomeBox>
-          <Typewriter
-            onInit={() => void 0}
-            options={{
-              strings: welcomeMessages,
-              autoStart: true,
-              loop: true
-            }}
+    <>
+      <S.Container id="home">
+        <S.PersonalInfoContainer>
+          <S.WelcomeBox>
+            <Typewriter
+              onInit={() => void 0}
+              options={{
+                strings: welcomeMessages,
+                autoStart: true,
+                loop: true
+              }}
+            />
+          </S.WelcomeBox>
+          <h1>{title}</h1>
+          <h2>{subTitle}</h2>
+        </S.PersonalInfoContainer>
+        <S.ImageWrapper>
+          <Image
+            src="/assets/home-image.svg"
+            alt="Ilustration of Developer"
+            height={500}
+            width={550}
           />
-        </S.WelcomeBox>
-        <h1>{title}</h1>
-        <h2>{subTitle}</h2>
-      </S.PersonalInfoContainer>
-      <S.ImageWrapper>
-        <Player autoplay loop src="/assets/home-image.json"></Player>
-      </S.ImageWrapper>
-    </S.Container>
+        </S.ImageWrapper>
+      </S.Container>
+    </>
   );
 };
 

@@ -1,21 +1,30 @@
 import styled, { keyframes } from 'styled-components';
-import { h5Mixin, h6Mixin, text } from '@diogop_96/portfolio-component-library';
+import {
+  deviceQueries,
+  h5Mixin,
+  h6Mixin,
+  text
+} from '@diogop_96/portfolio-component-library';
 
-const load7 = keyframes`
+const loadAnimation = keyframes`
   0%,
   80%,
   100% {
     box-shadow: 0 2.5em 0 -1.3em;
   }
+
   40% {
     box-shadow: 0 2.5em 0 0;
   }
-
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
   padding: 100px 0;
+
+  @media screen and (${deviceQueries.tablet.min}) {
+    padding: 138px 0;
+  }
 `;
 
 export const Title = styled.h2`
@@ -116,8 +125,8 @@ export const Loader = styled.div`
     height: 1.5em;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    -webkit-animation: ${load7} 2.2s infinite ease-in-out;
-    animation: ${load7} 2.2s infinite ease-in-out;
+    -webkit-animation: ${loadAnimation} 2.2s infinite ease-in-out;
+    animation: ${loadAnimation} 2.2s infinite ease-in-out;
   }
 
   &::before,

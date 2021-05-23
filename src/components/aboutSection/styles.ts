@@ -25,6 +25,7 @@ export const ImageWrapper = styled.div`
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  object-fit: contain;
 
   @media screen and (${deviceQueries.tablet.min}) {
     max-width: 550px;

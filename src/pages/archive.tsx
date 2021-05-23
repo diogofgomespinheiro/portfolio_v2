@@ -114,7 +114,7 @@ const ArchivePage = ({ seoMetaTags }: ArchivePageProps) => {
               )}
             </S.TableBody>
           </S.TableContainer>
-          {loading && <S.Loader>Test</S.Loader>}
+          {loading && <S.Loader />}
         </S.Container>
       </S.Wrapper>
     </Layout>
