@@ -12,7 +12,12 @@ import {
 import { AboutSectionProps } from './types';
 import * as S from './styles';
 
-const AboutSection = ({ title, description, tabs }: AboutSectionProps) => {
+const AboutSection = ({
+  title,
+  description,
+  sideImage,
+  tabs
+}: AboutSectionProps) => {
   const tabsListItems = tabs.map(tab => (
     <Tab key={`${tab.title}-list-item`}>{tab.title}</Tab>
   ));
@@ -27,8 +32,8 @@ const AboutSection = ({ title, description, tabs }: AboutSectionProps) => {
     <S.Container id="about">
       <S.ImageWrapper>
         <Image
-          src="/assets/about-image.svg"
-          alt="Ilustration of Developer 2"
+          src={sideImage.url}
+          alt={sideImage.alt}
           width={500}
           height={500}
         />

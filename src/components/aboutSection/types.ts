@@ -13,6 +13,7 @@ export type AboutSectionTabs = {
 
 export type AboutSectionProps = {
   title: string;
+  sideImage: ImageProps;
   description: string;
   tabs: AboutSectionTabs[];
 };

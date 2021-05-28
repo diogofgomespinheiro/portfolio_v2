@@ -45,11 +45,12 @@ export class LandingPagePropsMapper {
   }
 
   mapAboutSectionProps(): LandingPagePropsMapper {
-    const { title, description } = this.data.aboutSection;
+    const { title, description, sideImage } = this.data.aboutSection;
 
     const aboutSection: AboutSectionProps = {
       title,
       description,
+      sideImage,
       tabs: this.getAboutSectionTabs()
     };
 

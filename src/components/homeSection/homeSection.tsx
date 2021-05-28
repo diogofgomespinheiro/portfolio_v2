@@ -8,6 +8,7 @@ import * as S from './styles';
 const HomeSection = ({
   title,
   subTitle,
+  sideImage,
   welcomeMessages
 }: HomeSectionProps) => {
   return (
@@ -29,8 +30,8 @@ const HomeSection = ({
         </S.PersonalInfoContainer>
         <S.ImageWrapper>
           <Image
-            src="/assets/home-image.svg"
-            alt="Ilustration of Developer"
+            src={sideImage.url}
+            alt={sideImage.alt}
             height={500}
             width={550}
           />

@@ -28,8 +28,8 @@ export const homeSectionQuery = `
 export const aboutSectionQuery = `
   aboutSection {
     sideImage {
-      alt
       url
+      alt
     }
     title
     description
