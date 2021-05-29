@@ -11,24 +11,29 @@ import {
 import { useIntersectionObserver } from '@/utils/hooks';
 
 import { HeaderProps } from './types';
-import { menuItems } from './utils';
 import * as S from './styles';
 
-const Header = ({ pageId }: HeaderProps) => {
+const Header = ({
+  menuItems,
+  enableLinkObserver,
+  linksQuery = ''
+}: HeaderProps) => {
   const router = useRouter();
   const darkMode = useDarkMode();
   const {
     selectedItemState: { setSelectedItem }
   } = useNavbar();
 
-  useIntersectionObserver({
-    elementsQuery: '#home, #about, #projects, #contact',
-    threshold: 0.45,
-    onElementIntersected: setSelectedItem,
-    useIndex: true
-  });
+  if (enableLinkObserver) {
+    useIntersectionObserver({
+      elementsQuery: linksQuery,
+      threshold: 0.45,
+      onElementIntersected: setSelectedItem,
+      useIndex: true
+    });
+  }
 
-  const navBarMenuListItems = menuItems[pageId].items.map(
+  const navBarMenuListItems = menuItems.map(
     (item): React.ReactElement => {
       if (item.type === 'link') {
         return (

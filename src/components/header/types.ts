@@ -1,3 +1,7 @@
+import { HeaderMenuItem } from '@/shared';
+
 export type HeaderProps = {
-  pageId: 'home' | 'archive' | 'blog';
+  menuItems: HeaderMenuItem[];
+  enableLinkObserver?: boolean;
+  linksQuery?: string;
 };

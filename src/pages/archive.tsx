@@ -18,7 +18,7 @@ import { getArchivePageContent } from '@/lib';
 import { ArchivePageProps, GithubRepoProps } from '@/shared';
 import * as S from '@/styles/pages/archive.styles';
 
-const ArchivePage = ({ seoMetaTags }: ArchivePageProps) => {
+const ArchivePage = ({ seoMetaTags, navbar }: ArchivePageProps) => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const { repositories, loading, hasMore } = useRepostorySearch(
@@ -83,7 +83,10 @@ const ArchivePage = ({ seoMetaTags }: ArchivePageProps) => {
   };
 
   return (
-    <Layout pageId="archive">
+    <Layout
+      headerMenuItemSelectedIndex={navbar.selectedIndex}
+      headerMenuItems={navbar.items}
+    >
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <S.Wrapper id="archive">
         <S.Title>Archive</S.Title>

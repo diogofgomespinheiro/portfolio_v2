@@ -1,27 +1,12 @@
+import { BaseMapper } from './base.mapper';
 import { AboutSectionProps, AboutSectionTabs } from '@/components/aboutSection';
 import { HomeSectionProps } from '@/components/homeSection';
 import { ContactSectionProps } from '@/components/contactSection';
 import { ProjectsSectionProps } from '@/components/projectsSection';
 import { LandingPageProps, ImageProps } from '@/shared';
 
-export class LandingPagePropsMapper {
-  data: any;
-  props: LandingPageProps;
-
-  constructor(data: any) {
-    this.data = data;
-    this.props = {} as LandingPageProps;
-  }
-
-  mapSeoProps(): LandingPagePropsMapper {
-    const { seo } = this.data.landingPage;
-    const concatenatedSeo = seo.concat(this.data.site.favicon);
-
-    Object.assign(this.props, { seoMetaTags: concatenatedSeo });
-    return this;
-  }
-
-  mapHomeSectionProps(): LandingPagePropsMapper {
+export class LandingPagePropsMapper extends BaseMapper<LandingPageProps> {
+  public mapHomeSectionProps(): LandingPagePropsMapper {
     const {
       title,
       subTitle,
@@ -44,7 +29,7 @@ export class LandingPagePropsMapper {
     return this;
   }
 
-  mapAboutSectionProps(): LandingPagePropsMapper {
+  public mapAboutSectionProps(): LandingPagePropsMapper {
     const { title, description, sideImage } = this.data.aboutSection;
 
     const aboutSection: AboutSectionProps = {
@@ -58,7 +43,7 @@ export class LandingPagePropsMapper {
     return this;
   }
 
-  mapProjectsSectionProps(): LandingPagePropsMapper {
+  public mapProjectsSectionProps(): LandingPagePropsMapper {
     const { title, projects } = this.data.projectsSection;
     const transformedProjects = projects.map(
       (project: Record<string, any>) => ({
@@ -76,15 +61,11 @@ export class LandingPagePropsMapper {
     return this;
   }
 
-  mapContactSectionProps(): LandingPagePropsMapper {
+  public mapContactSectionProps(): LandingPagePropsMapper {
     const contactSection: ContactSectionProps = this.data.contactSection;
 
     Object.assign(this.props, { contactSection });
     return this;
-  }
-
-  getProps(): LandingPageProps {
-    return this.props;
   }
 
   private getAboutSectionTabs(): AboutSectionTabs[] {

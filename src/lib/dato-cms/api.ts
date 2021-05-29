@@ -1,16 +1,21 @@
 import axios from 'axios';
 
-import { FetchAPIParamOptions, LandingPageProps } from '@/shared';
+import {
+  FetchAPIParamOptions,
+  LandingPageProps,
+  ArchivePageProps
+} from '@/shared';
 import { DATOCMS_API_TOKEN, DATOCMS_API_URL } from './constants';
 import { responsiveImageFragment, metaTagsFragment } from './fragments';
 import {
   landingPageQuery,
+  archivePageQuery,
   aboutSectionQuery,
   homeSectionQuery,
   contactSectionQuery,
   projectsSectionQuery
 } from './queries';
-import { LandingPagePropsMapper } from '@/lib/mappers';
+import { LandingPagePropsMapper, BaseMapper } from './mappers';
 
 export async function fetchAPI(
   query: string,
@@ -64,8 +69,9 @@ export async function getLandingPageContent(
     { preview }
   );
 
-  const mappedData = new LandingPagePropsMapper(data)
+  const mappedData = new LandingPagePropsMapper(data, 'landingPage')
     .mapSeoProps()
+    .mapHeaderProps()
     .mapHomeSectionProps()
     .mapAboutSectionProps()
     .mapProjectsSectionProps()
@@ -77,12 +83,11 @@ export async function getLandingPageContent(
 
 export async function getArchivePageContent(
   preview: boolean
-): Promise<LandingPageProps> {
+): Promise<ArchivePageProps> {
   const data = await fetchAPI(
     `
       {
-        ${landingPageQuery}
-
+        ${archivePageQuery}
       }
 
       ${metaTagsFragment}
@@ -90,7 +95,10 @@ export async function getArchivePageContent(
     { preview }
   );
 
-  const mappedData = new LandingPagePropsMapper(data).mapSeoProps().getProps();
+  const mappedData = new BaseMapper<ArchivePageProps>(data, 'archivePage')
+    .mapSeoProps()
+    .mapHeaderProps()
+    .getProps();
 
   return mappedData;
 }

@@ -13,13 +13,19 @@ import { LandingPageProps } from '@/shared';
 
 const LandingPage = ({
   seoMetaTags,
+  navbar,
   homeSection,
   aboutSection,
   projectsSection,
   contactSection
 }: LandingPageProps) => {
   return (
-    <Layout pageId="home">
+    <Layout
+      headerMenuItemSelectedIndex={navbar.selectedIndex}
+      headerMenuItems={navbar.items}
+      enableLinkObserver
+      linksQuery="#home, #about, #projects, #contact"
+    >
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <HomeSection {...homeSection} />
       <AboutSection {...aboutSection} />

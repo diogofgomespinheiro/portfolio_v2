@@ -34,6 +34,7 @@ const HomeSection = ({
             alt={sideImage.alt}
             height={500}
             width={550}
+            priority
           />
         </S.ImageWrapper>
       </S.Container>

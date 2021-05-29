@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 import { GITHUB_API_URL } from '@/lib';
-import { RepositoriesMapper } from '@/lib/mappers';
+import { RepositoriesMapper } from '@/lib/github/mappers';
 import { GithubRepoProps } from '@/shared';
 
 export default async function handler(

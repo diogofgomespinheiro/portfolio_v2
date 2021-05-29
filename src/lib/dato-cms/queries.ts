@@ -3,6 +3,37 @@ export const landingPageQuery = `
     seo: _seoMetaTags {
       ...metaTagsFragment
     }
+    navbarSelectedItemIndex
+    navbarItems {
+      pageId
+      label
+      route
+      spy
+      actionType
+      offset
+    }
+  }
+  site: _site {
+    favicon: faviconMetaTags {
+      ...metaTagsFragment
+    }
+  }
+`;
+
+export const archivePageQuery = `
+  archivePage {
+    seo: _seoMetaTags {
+      ...metaTagsFragment
+    }
+    navbarSelectedItemIndex
+    navbarItems {
+      pageId
+      label
+      route
+      spy
+      actionType
+      offset
+    }
   }
   site: _site {
     favicon: faviconMetaTags {
