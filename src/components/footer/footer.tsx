@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {
-  EmailIcon,
   GithubIcon,
   LinkedinIcon
 } from '@diogop_96/portfolio-component-library';
