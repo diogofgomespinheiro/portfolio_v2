@@ -9,4 +9,5 @@ export type LayoutProps = {
   headerMenuItems: HeaderMenuItem[];
   enableLinkObserver?: boolean;
   linksQuery?: string;
+  resumeUrl: string;
 };

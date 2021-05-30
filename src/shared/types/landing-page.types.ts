@@ -11,6 +11,7 @@ export type LandingPageProps = {
   navbar: {
     selectedIndex: number;
     items: HeaderMenuItem[];
+    resumeUrl: string;
   };
   homeSection: HomeSectionProps;
   aboutSection: AboutSectionProps;

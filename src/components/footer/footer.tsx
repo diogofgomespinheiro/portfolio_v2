@@ -1,10 +1,27 @@
 import * as React from 'react';
+import {
+  EmailIcon,
+  GithubIcon,
+  LinkedinIcon
+} from '@diogop_96/portfolio-component-library';
 
 import * as S from './styles';
 
 const Footer = () => {
   return (
     <S.Footer>
+      <S.SocialLinks>
+        <LinkedinIcon
+          fill="#DE9D7B"
+          onClick={() =>
+            window.open('https://www.linkedin.com/in/diogo-fgpinheiro/')
+          }
+        />
+        <GithubIcon
+          fill="#DE9D7B"
+          onClick={() => window.open('https://github.com/diogofgomespinheiro')}
+        />
+      </S.SocialLinks>
       <span>
         Design by{' '}
         <a

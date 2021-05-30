@@ -16,7 +16,8 @@ import * as S from './styles';
 const Header = ({
   menuItems,
   enableLinkObserver,
-  linksQuery = ''
+  linksQuery = '',
+  resumeUrl = ''
 }: HeaderProps) => {
   const router = useRouter();
   const darkMode = useDarkMode();
@@ -61,7 +62,9 @@ const Header = ({
     <Navbar
       icon={<S.Logo onClick={() => router.push('/')} />}
       menuListItems={navBarMenuListItems}
-      extraMenuItem={<Button>Resume</Button>}
+      extraMenuItem={
+        <Button onClick={() => window.open(resumeUrl)}>Resume</Button>
+      }
       extraItems={
         <ThemeSwitcher
           controlledState={darkMode.value}

@@ -20,7 +20,9 @@ export class BaseMapper<P> {
   }
 
   public mapHeaderProps(): this {
-    const { navbarSelectedItemIndex, navbarItems } = this.data[this.pageKey];
+    const { navbarSelectedItemIndex, navbarItems, resumeUrl } = this.data[
+      this.pageKey
+    ];
 
     const mappedNavbarItems: HeaderMenuItem[] = navbarItems.map(
       (item: Record<string, unknown>) => ({
@@ -36,7 +38,8 @@ export class BaseMapper<P> {
     Object.assign(this.props, {
       navbar: {
         selectedIndex: navbarSelectedItemIndex,
-        items: mappedNavbarItems
+        items: mappedNavbarItems,
+        resumeUrl: resumeUrl.url
       }
     });
     return this;

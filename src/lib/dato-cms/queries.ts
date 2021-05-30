@@ -3,6 +3,9 @@ export const landingPageQuery = `
     seo: _seoMetaTags {
       ...metaTagsFragment
     }
+    resumeUrl {
+      url
+    }
     navbarSelectedItemIndex
     navbarItems {
       pageId
@@ -24,6 +27,9 @@ export const archivePageQuery = `
   archivePage {
     seo: _seoMetaTags {
       ...metaTagsFragment
+    }
+    resumeUrl {
+      url
     }
     navbarSelectedItemIndex
     navbarItems {

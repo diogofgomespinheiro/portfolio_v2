@@ -86,6 +86,7 @@ const ArchivePage = ({ seoMetaTags, navbar }: ArchivePageProps) => {
     <Layout
       headerMenuItemSelectedIndex={navbar.selectedIndex}
       headerMenuItems={navbar.items}
+      resumeUrl={navbar.resumeUrl}
     >
       <Head>{renderMetaTags(seoMetaTags)}</Head>
       <S.Wrapper id="archive">

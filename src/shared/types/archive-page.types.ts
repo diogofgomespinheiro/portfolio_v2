@@ -7,5 +7,6 @@ export type ArchivePageProps = {
   navbar: {
     selectedIndex: number;
     items: HeaderMenuItem[];
+    resumeUrl: string;
   };
 };
