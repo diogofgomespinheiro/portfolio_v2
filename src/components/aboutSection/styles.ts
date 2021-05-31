@@ -9,7 +9,6 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
 
   min-height: 100vh;
   width: 100%;
@@ -24,13 +23,13 @@ export const Container = styled.section`
 export const ImageWrapper = styled.div`
   width: 100%;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   object-fit: contain;
 
   @media screen and (${deviceQueries.tablet.min}) {
     max-width: 550px;
     min-width: 350px;
-    margin: 0;
+    margin: 0 0 40px 0;
   }
 
   @media screen and (${deviceQueries.laptop.min}) {

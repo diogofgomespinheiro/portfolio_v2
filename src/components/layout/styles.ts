@@ -21,7 +21,7 @@ export const SocialLinks = styled.div`
   @media screen and (${deviceQueries.tablet.min}) {
     position: fixed;
     bottom: 0;
-    left: 23.5px;
+    left: 13.5px;
     display: flex;
     flex-direction: column;
     align-items: center;

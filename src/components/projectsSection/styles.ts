@@ -33,9 +33,9 @@ export const RepositoryLink = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 `;
 
 export const StyledEyeIcon = styled(EyeIcon)`
   fill: ${({ theme }) => theme.colors.primary};
+  margin-right: 5px;
 `;

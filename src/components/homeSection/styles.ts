@@ -10,7 +10,6 @@ export const Container = styled.section`
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  gap: 40px;
 
   min-height: 100vh;
   width: 100%;
@@ -57,7 +56,7 @@ export const WelcomeBox = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   object-fit: contain;
 
   @media screen and (${deviceQueries.tablet.min}) {

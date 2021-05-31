@@ -24,7 +24,7 @@ export default createGlobalStyle`
     padding: 0 30px;
 
     @media screen and (${deviceQueries.tablet.min}) {
-      padding: 0 80px;
+      padding: 0 60px;
     }
   }
 
