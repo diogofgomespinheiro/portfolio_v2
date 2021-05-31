@@ -940,10 +940,10 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
-"@diogop_96/portfolio-component-library@1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@diogop_96/portfolio-component-library/-/portfolio-component-library-1.4.4.tgz#e5022a9e782de6f36268f7be6fbb4b4d6ff3038a"
-  integrity sha512-43+uZIFOUiyjIhXZMq8uLRxFit6358pIKuwfeuoB2+L4wXB0En4T8lkYO2HJM09KJCECWbYB1/zzZw3TO8JSKA==
+"@diogop_96/portfolio-component-library@1.4.5":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@diogop_96/portfolio-component-library/-/portfolio-component-library-1.4.5.tgz#0ac657bbe41bf765717851efb87641d108ffe223"
+  integrity sha512-MMzPssuuc4FO0EbD1ZMLVqhU4B085wf+vNnyor3MRFDmoqwna9EQHUoefMlez00J3kkqd3BZx7OLo051z6zP+A==
 
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"

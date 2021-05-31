@@ -9,7 +9,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@diogop_96/portfolio-component-library": "1.4.4",
+    "@diogop_96/portfolio-component-library": "1.4.5",
     "axios": "^0.21.1",
     "next": "latest",
     "react": "^17.0.1",
